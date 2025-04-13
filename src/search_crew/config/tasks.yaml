@@ -1,0 +1,29 @@
+nutrition_research_task:
+  description: >
+    Research nutrition recommendations and restrictions for {health_condition} from reliable sources.
+    Identify foods that are beneficial for managing this condition and those that should be limited or avoided.
+    Consider interactions with common medications and both short-term and long-term nutritional approaches.
+  expected_output: >
+    A comprehensive nutrition guide for {health_condition} that includes:
+    1. A brief overview of how nutrition affects this health condition
+    2. A structured list of recommended foods with explanations of their benefits
+    3. A structured list of foods to restrict or avoid with explanations
+    4. Key nutrients of special concern (either to increase or limit)
+    5. Sample meal ideas appropriate for this condition
+  agent: nutrition_advisor
+
+nutrition_reporting_task:
+  description: >
+    Review all research findings on nutritional recommendations for {health_condition}.
+    Synthesize the information into a comprehensive, practical nutrition guide that patients
+    and healthcare providers can easily understand and implement.
+    Make sure to organize information logically and include practical implementation advice.
+  expected_output: >
+    A comprehensive nutrition guide for {health_condition} formatted as markdown with:
+    1. Nutritional Impact: How this condition affects nutritional needs (if applicable)
+    2. Recommended Foods: Categorized list with specific benefits explained
+    3. Foods to Limit/Avoid: Categorized list with reasons for restriction
+    4. Sample Meal Plan: 1-day example with portions and preparation notes
+    5. Special Considerations: Medication interactions, symptom management, etc. (if applicable)
+  output_file: knowledge/{health_condition}.md
+  agent: nutrition_report_creator

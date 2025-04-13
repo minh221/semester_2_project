@@ -1,0 +1,18 @@
+meal_planning_task:
+  description: >
+    Create a personalized meal plan for {number_of_days} days based on user's health profile, 
+    dietary preferences, and nutritional goals. The plan should be tailored to support
+    management of any health conditions while respecting food preferences and restrictions.
+
+    This is the user's profile:
+    - Health Conditions: {health_conditions}
+    - Dietary Preferences: {dietary_preferences}
+    - Allergies: {allergies}
+    - Nutritional Goals: {nutritional_goals}
+    - Food Preferences: {food_preferences}
+  expected_output: >
+    A detailed meal plan for {number_of_days} days that includes:
+    1. Daily meal breakdown (breakfast, lunch, dinner, snacks)
+    2. Portion sizes and preparation methods
+    3. Additional advice if applicable
+  agent: meal_planner
